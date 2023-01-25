@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Biography</string>
+    <string name="janet_mutua">Janet Mutua</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">Hello my name is Janet Mutua
+    \n\n I am a mobile developer based in Kenya.
+    \n I love eating fish and chicken.
+    \n My favorite passtime is seeking out adventures.
+    \n\n I have a house and live with my cat Reede.
+    \n I am working on my ANdroid-Kotlin skills ,
+    \n And i hope that by mid-year or end year I will have:
+    \n\n Mastered Android, Kotlin
+    \n and read 20 books on ANdroid and Kotlin.
+    \n I am still n my first book. Bye!
+    \n I am working on my ANdroid-Kotlin skills ,
+    \n And i hope that by mid-year or end year I will have:
+    \n\n Mastered Android, Kotlin
+    \n and read 20 books on ANdroid and Kotlin.
+    \n I am still n my first book. Bye!
+    \n I am working on my ANdroid-Kotlin skills ,
+    \n And i hope that by mid-year or end year I will have:
+    \n\n Mastered Android, Kotlin
+    \n and read 20 books on ANdroid and Kotlin.
+    \n I am still n my first book. Bye!</string>
+    <string name="bio_avatar">Bio avatar</string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="enter_date">Enter date</string>
+</resources>
