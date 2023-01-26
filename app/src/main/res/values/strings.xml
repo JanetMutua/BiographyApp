@@ -25,4 +25,5 @@
     <string name="bio_avatar">Bio avatar</string>
     <string name="what_is_your_nickname">What is your nickname?</string>
     <string name="enter_date">Enter date</string>
+    <string name="done">Done</string>
 </resources>
