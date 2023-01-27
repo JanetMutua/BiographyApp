@@ -8,33 +8,48 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.biography.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    //initializing binding object in activities : instantiated on onCreate
+    private lateinit var binding : ActivityMainBinding
+
+    //creating an instance of the data class and set the name
+    private val myName:MyName = MyName("Janet Mutua")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        findViewById<Button>(R.id.done_button).setOnClickListener{
+        //setting the value of the myName variable that is declates and used in the layout file
+        binding.myName = myName
+
+        binding.doneButton.setOnClickListener{
             addNickname(it)
         }
 
     }
 
     private fun addNickname(view:View) {
-        //input text that prompts user to enter their nickname
-        val editText = findViewById<EditText>(R.id.nickname_name)
-        // display text view for the nickname
-        val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
 
         //assign the user input for nickname to the nickname text view
-        nicknameTextView.text = editText.text
+        // using Kotlin's .apply to make the code easier to read
 
-        //changing visibility by removing the editText view and the done button
-        editText.visibility = View.GONE
-        view.visibility = View.GONE
+        binding.apply {
+            //binding.nicknameText.text = binding.nicknameName.text
+            myName?.nickname = nicknameName.text.toString()
+            //refresh the UI with the new data ; all binding expressions will be recreated with the correct binding data
+            invalidateAll()
+            //changing visibility by removing the editText view and the done button
+            binding.nicknameName.visibility = View.GONE
+            binding.doneButton.visibility = View.GONE
 
-        nicknameTextView.visibility = View.VISIBLE
+            binding.nicknameText.visibility = View.VISIBLE
+        }
+
 
         //Hiding the keyboard
 
