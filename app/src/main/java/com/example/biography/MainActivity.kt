@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //instantiating the binding variable and setting the content view
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         //setting the value of the myName variable that is declates and used in the layout file
@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity() {
             //refresh the UI with the new data ; all binding expressions will be recreated with the correct binding data
             invalidateAll()
             //changing visibility by removing the editText view and the done button
-            binding.nicknameName.visibility = View.GONE
-            binding.doneButton.visibility = View.GONE
+            nicknameName.visibility = View.GONE
+            doneButton.visibility = View.GONE
 
-            binding.nicknameText.visibility = View.VISIBLE
+            nicknameText.visibility = View.VISIBLE
         }
 
 
